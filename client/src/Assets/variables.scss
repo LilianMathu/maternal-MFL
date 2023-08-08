@@ -1,0 +1,89 @@
+// Primary colors
+$p50: #e6f1f8;
+$p75: #96c7e1;
+$p100: #6bb0d4;
+$p200: #2b8ec2;
+$p300: #0077b5;
+$p400: #00537f;
+$p500: #00496e;
+
+// Secondary colors
+$s50: #e6fffb;
+$s75: #b5f5ec;
+$s100: #87e8de;
+$s200: #5cdbd3;
+$s300: #36cfc9;
+$s400: #13c2c2;
+$s500: #08979c;
+$s600: #006d75;
+$s700: #00474f;
+$s800: #002329;
+
+// Success colors
+$success50: #ecf5ed;
+$success75: #b2d6b6;
+$success100: #91c497;
+$success200: #62ab6a;
+$success300: #429a4c;
+$success400: #2e6c35;
+$success500: #285e2e;
+$success600: #52c41a;
+
+// Danger colors
+$d50: #fee6e6;
+$d75: #f99696;
+$d100: #f66b6b;
+$d200: #f32b2b;
+$d300: #f5222d;
+$d400: #a80000;
+$d500: #920000;
+
+// Warning colors
+$w50: #fff6e6;
+$w75: #ffda96;
+$w100: #ffcb6b;
+$w200: #ffb42b;
+$w300: #ffa500;
+$w400: #b37300;
+$w500: #9c6500;
+
+// Neutral colors
+$n0: #ffffff;
+$n10: #fafafb;
+$n20: #f6f6f7;
+$n30: #edeef0;
+$n40: #e1e3e6;
+$n50: #c5c9cf;
+$n60: #b7bcc3;
+$n70: #acb1ba;
+$n80: #9ea4ae;
+$n90: #9097a3;
+$n100: #828a97;
+$n200: #747d8c;
+$n300: #677080;
+$n400: #5b6577;
+$n500: #4d586b;
+$n600: #424d62;
+$n700: #313e54;
+$n800: #243149;
+$n900: #18263f;
+
+
+// mixins
+@mixin for-tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-laptop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
