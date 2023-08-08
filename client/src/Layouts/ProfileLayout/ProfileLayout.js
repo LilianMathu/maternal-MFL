@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Switch } from "react-router-dom";
 import Appbar from "../../Components/Appbar/Appbar";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Dashboard from "../../Features/Dashboard/Dashboard";
 import Maternal from "../../Features/Maternal MFL/Maternal";
-import "./profilelayout.scss";
 import NCD from "../../Features/NCD-MFL/NCD";
+import HospitalProfile from "../../Features/Maternal MFL/HospitalProfile";
+import "./profilelayout.scss";
 
 const ProfileLayout = () => {
   const [sideBar, setSideBar] = useState(false);
@@ -31,7 +32,7 @@ const ProfileLayout = () => {
           <Route path="/" element={<Dashboard />} />
           <Route path="/maternal" element={<Maternal />} />
           <Route path="/ncd" element={<NCD />} />
-
+          <Route path="/maternal/:hospitalId" element={<HospitalProfile />} />
           <Route path="/logout" />
         </Routes>
       </div>
