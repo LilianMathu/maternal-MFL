@@ -13,6 +13,7 @@ function App() {
             path="/*"
             element={isLoggedIn ? <ProfileLayout /> : <AuthLayout />}
           />
+          
         </Routes>
       </Router>
     </div>
