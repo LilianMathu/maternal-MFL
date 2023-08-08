@@ -1,0 +1,71 @@
+@import "../../Assets/variables.scss";
+
+.appbar {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba($color: $s300, $alpha: 0.8);
+  backdrop-filter: saturate(80%) blur(20px);
+  z-index: 2;
+}
+
+.appbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.appbar-logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    border-radius: 100%;
+    border: white;
+    background-color: white;
+    width: 60px;
+    padding: 5px;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: aliceblue;
+    margin-left: 12px;
+  }
+}
+
+.appbar-avatar {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 60px;
+    height: 60px;
+    display: none;
+  }
+
+  svg {
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
+
+@include for-desktop {
+  .appbar-avatar {
+    img {
+      display: initial;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+}

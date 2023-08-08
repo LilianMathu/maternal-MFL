@@ -1,0 +1,43 @@
+@import "../../Assets/variables.scss";
+
+body {
+  background-color: $n30;
+}
+
+.profilelayout {
+  background: $n30;
+  display: flex;
+  overflow: hidden;
+}
+
+.profilelayout-sidebar {
+  display: none;
+}
+
+.profilelayout-sidebar.open {
+  display: initial;
+}
+
+.profilelayout-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  padding-top: calc(2% + 75px);
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 5em;
+  margin: 0;
+}
+
+@include for-desktop {
+  .profilelayout-sidebar {
+    display: initial;
+  }
+
+  .profilelayout-content {
+    padding-left: 280px;
+    flex-direction: row;
+  }
+}

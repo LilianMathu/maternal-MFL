@@ -1,7 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProfileLayout from "./Layouts/ProfileLayout/ProfileLayout";
+import AuthLayout from "./Layouts/AuthLayout/AuthLayout";
+
 function App() {
+  const isLoggedIn = true;
+
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <Router>
+        <Routes>
+          <Route
+            path="/*"
+            element={isLoggedIn ? <ProfileLayout /> : <AuthLayout />}
+          />
+        </Routes>
+      </Router>
     </div>
   );
 }

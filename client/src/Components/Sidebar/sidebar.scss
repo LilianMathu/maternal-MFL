@@ -1,0 +1,37 @@
+@import "../../Assets/variables.scss";
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  position: fixed;
+  top: 75px;
+  height: 100vh;
+  min-width: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+.ant-menu-light {
+  background: $p300 !important;
+  min-width: 200px;
+  color: $p50;
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+.ant-menu-light.ant-menu-inline .ant-menu-item {
+  margin-bottom: 1rem;
+}
+
+.ant-menu-item-selected {
+  background-color: $p50;
+  color: $p500 !important;
+}
+
+.ant-menu-light:not(.ant-menu-horizontal)
+  .ant-menu-item:not(.ant-menu-item-selected):hover {
+  background-color: $s75;
+  color: $s800;
+}
